@@ -1,6 +1,0 @@
-#ignora node_modules y package-lock.json
-node_modules
-package-lock.json
-
-.env
-.env.test
