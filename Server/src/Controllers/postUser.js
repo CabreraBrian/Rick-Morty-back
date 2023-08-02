@@ -5,7 +5,13 @@ const postUser = async (req, res) => {
     try {
         const { email, password} = req.body;
         if(!email || !password) return res.status(400).send('Faltan datos');
-        const user = await User.findOrCreate({ where:{ email, password }});
+
+        const user = await User.findOrCreate({ 
+            where:{ email },
+            defaults : { 
+                password 
+            }
+        });
         return res.status(200).json(user);
 
     } catch (error) {

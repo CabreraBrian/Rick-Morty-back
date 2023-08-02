@@ -8,4 +8,3 @@ conn.sync({force: false}).then(()=>{
         console.log(`Listening on port ${PORT}`)
     });
 });
-
